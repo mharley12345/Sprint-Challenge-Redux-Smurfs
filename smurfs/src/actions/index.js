@@ -2,6 +2,11 @@
   Action Types Go Here!
   Be sure to export each action type so you can pull it into your reducer
 */
+expoert {
+  FETCH_SMURFS_DATA_START,
+  FETCH_SMURFS_DATA_SUCCESS,
+  FETCH_SMURFS_DATA_FAILURE
+} from './smurfActions'
 
 /*
   For this project you'll need at least 2 action creators for the main portion,

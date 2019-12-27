@@ -1,6 +1,99 @@
 /*
   Be sure to import in all of the action types from `../actions`
 */
+import axios from 'axion'
+export const FETCH_SMURFS_DATA_START = "FETCH_SMURFS_DATA_START"
+export const FETCH_SMURFS_DATA_SUCCESS = "FETCH_SMURFS_DATA_SUCCESS"
+export const FETCH_SMURFS_DATA_FAILURE = "FETCH_SMURFS_DATA_FAILURE"
+ 
+export const getData = () => {
+  return dispatch => {
+    axios
+    .get(`http://localhost:3333/smurfs`)
+    .then(res => {
+      console.log("GET Request Response: ", res);
+      dispatch({ type: FETCH_SMURFS_DATA_SUCCESS, payload: res.data });
+    })
+    .catch(err => {
+      dispatch({ type: FETCH_SMURFS_DATA_FAILURE, payload: err.response });
+    });
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
  Your initial/default state for this project could *Although does not have to* look a lot like this
